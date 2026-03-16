@@ -47,11 +47,12 @@
     .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 120px 48px 80px; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 45%, rgba(197,165,78,0.06) 0%, transparent 70%), repeating-linear-gradient(0deg, transparent, transparent 100px, rgba(197,165,78,0.02) 100px, rgba(197,165,78,0.02) 101px); pointer-events: none; }
     .hero-badge { font-size: 0.72rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 32px; font-weight: 600; opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
-    .hero-crest { width: 160px; height: auto; margin-bottom: 40px; opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards; filter: drop-shadow(0 0 60px rgba(197,165,78,0.2)); }
+    .hero-crest { width: 160px; height: auto; margin-bottom: 24px; opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards; filter: drop-shadow(0 0 60px rgba(197,165,78,0.2)); }
+    .hero-letters { width: clamp(280px, 40vw, 450px); height: auto; margin-bottom: 16px; opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards; filter: drop-shadow(0 4px 20px rgba(0,0,0,0.4)); }
     .hero h1 { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 700; line-height: 1.1; color: var(--white); margin-bottom: 16px; opacity: 0; animation: fadeUp 0.8s ease 0.6s forwards; }
     .hero h1 em { color: var(--gold); font-style: italic; }
     .hero-subtitle { font-family: var(--serif); font-size: 1.25rem; color: var(--medium-gray); font-weight: 400; margin-bottom: 48px; font-style: italic; opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards; }
-    .hero-motto { display: flex; gap: 32px; align-items: center; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); font-weight: 500; opacity: 0; animation: fadeUp 0.8s ease 1s forwards; }
+    .hero-motto { display: flex; gap: 32px; align-items: center; font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-light); font-weight: 500; opacity: 0; animation: fadeUp 0.8s ease 1s forwards; margin-bottom: 80px; }
     .hero-motto .divider { width: 40px; height: 1px; background: var(--gold-dark); }
     .scroll-hint { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; animation: fadeUp 0.8s ease 1.2s forwards; }
     .scroll-hint span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--medium-gray); }
@@ -70,7 +71,7 @@
     /* ABOUT */
     #home { background: var(--black); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 48px; }
+    .about-stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; margin-top: 48px; }
     .stat-card { padding: 28px; background: var(--charcoal); border: 1px solid rgba(197,165,78,0.1); border-radius: 4px; }
     .stat-number { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; }
     .stat-label { font-size: 0.78rem; letter-spacing: 0.08em; color: var(--medium-gray); text-transform: uppercase; }
@@ -171,8 +172,8 @@
   <section class="hero" id="hero">
     <div class="hero-badge">Beta Upsilon Chapter &middot; Est. 1895</div>
     <img src="crest.png" alt="Sigma Nu Crest" class="hero-crest">
-    <h1>Sigma Nu at<br><em>Rose-Hulman</em></h1>
-    <p class="hero-subtitle">Building men of honor since 1895</p>
+    <img src="logo.png" alt="Sigma Nu" class="hero-letters">
+    <p class="hero-subtitle">Beta Upsilon Chapter at Rose-Hulman</p>
     <div class="hero-motto">
       <span>Love</span>
       <span class="divider"></span>
@@ -193,10 +194,9 @@
           <div class="section-label">About Our Chapter</div>
           <h2 class="section-title">A Legacy of <em>Honor</em><br>& Achievement</h2>
           <p class="body-text">Sigma Nu Fraternity places a strong emphasis on the concept of honor, and its members are expected to uphold the highest standards of integrity and personal conduct. The fraternity's motto — <strong>Love, Truth, and Honor</strong> — reflects the importance placed on these values, and its members strive to embody these principles in all aspects of their lives.</p>
-          <p class="body-text">We uphold a strong track record of academic and athletic achievement. In recent years, the fraternity has consistently had one of the highest grade point averages on campus, and many of its members have gone on to distinguished careers in a wide variety of fields.</p>
+          <p class="body-text">We uphold a strong track record of academic and athletic achievement, and many of our members have gone on to distinguished careers in a wide variety of fields.</p>
           <div class="about-stats">
             <div class="stat-card"><div class="stat-number">1895</div><div class="stat-label">Chapter Founded</div></div>
-            <div class="stat-card"><div class="stat-number">Top 3</div><div class="stat-label">Campus GPA</div></div>
             <div class="stat-card"><div class="stat-number">130+</div><div class="stat-label">Years of Brotherhood</div></div>
             <div class="stat-card"><div class="stat-number">ΣΝ</div><div class="stat-label">Beta Upsilon</div></div>
           </div>
@@ -290,7 +290,7 @@
       </div>
       <div class="footer-right">
         <a href="mailto:sigmanubetaupsilon1869@gmail.com" class="footer-email">sigmanubetaupsilon1869@gmail.com</a>
-        <div class="footer-credit">Originally by Levi Wallace</div>
+        <div class="footer-credit">A Dylan Christopherson Production</div>
       </div>
     </div>
     <div class="footer-bottom">&copy; 2026 Sigma Nu Fraternity — Beta Upsilon Chapter at Rose-Hulman Institute of Technology</div>
